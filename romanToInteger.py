@@ -21,11 +21,14 @@ class Solution:
         
         while i < len(s):
             if i + 1 < len(s):
-                if numeralDict.has_key(s[i] + s[i + 1]):
+                if s[i] + s[i + 1] in numeralDict:
                     value += numeralDict[s[i] + s[i + 1]]
                     i += 2
-                    
-            value += numeralDict[s[i]]
-            i += 1
+                else:
+                    value += numeralDict[s[i]]
+                    i += 1
+            else:
+                value += numeralDict[s[i]]
+                i += 1
             
         return value
