@@ -1,4 +1,4 @@
-numeralDict = {
+numeral_dict = {
     'I'  : 1,
     'IV' : 4,
     'V'  : 5,
@@ -20,11 +20,11 @@ class Solution:
         i = 0
         
         while i < len(s):
-            if i + 1 < len(s) and s[i] + s[i + 1] in numeralDict:
-                value += numeralDict[s[i] + s[i + 1]]
+            if i + 1 < len(s) and s[i] + s[i + 1] in numeral_dict:
+                value += numeral_dict[s[i] + s[i + 1]]
                 i += 2
             else:
-                value += numeralDict[s[i]]
+                value += numeral_dict[s[i]]
                 i += 1
             
         return value
